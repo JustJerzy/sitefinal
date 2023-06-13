@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/pagestyle.css">
+        <link rel="stylesheet" href="../assets/css/about.css">
+        <link rel="stylesheet" href="../assets/css/header.css">
+        <link rel="stylesheet" href="../assets/css/footer.css">
+        <link rel="stylesheet" href="../assets/css/nav.css">
+        <link rel="stylesheet" href="../assets/css/intro.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/shoppingcart.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="../assets/images/ICON.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/9930dc3b58.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/app.js"></script>
+        <title>Обратная связь</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header header.fixed" id="header">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="../index.html" class="header-logo"><div class="header-logo" data-scroll="#intro">Спутник</div></a>
+                    <nav class="nav" id="nav">
+                        <nav class="nav" id="nav">
+                            <div class="nav-link">
+                                <a>Помощь</a>
+                                <div class="nav-link-hidden">Если возникли вопросы, вы можете позвонить по телефону: +7 (347) 224‒94‒74</div>
+                            </div>
+                        <a class="nav-link" href="#" data-scroll="#footer">О нас</a>
+                        <div class="nav-link">
+                            <i class="fas fa-shopping-cart"></i>
+                                <div class="nav-link-hidden">
+                                    <div class="titlecart">Корзина</div>
+                                    <div class="showcart">
+                                    <ul id="show-cart">
+                                        <li>???????</li>
+                                    </ul>
+                                    <div class="suptext-cart">Кол-во товаров в корзине: <span id="count-cart">X</span></div>
+                                    <div class="text-cart">Общая стоимость: <span id="total-cart"></span> руб.</div>
+                                    </div>
+                                    <div>
+                                        <button class="btncart" id="clear-cart">Очистить корзину</button>
+                                        <input placeholder="Купон" class="inputcart"  type="text" name="text1">
+                                        <input class="btncart"  type="button" value="Проверить купон" name="Submit" onclick="validate(document.getElementsByName('text1')[0].value)">
+                                    </div>
+                                </div>  
+                            </div>
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </nav>
+                    <button class="nav-toggle" id="nav-toggle" type="button">
+                        <span class="nav-toggle-item">Меню</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- /.HEADER  -->
+
+    <div class="container">
+
+        <div class="content">
+  
+          <div class="left-side">
+            <div class="address details">
+  
+              <i class="fas fa-map-marker-alt"></i>
+  
+              <div class="topic">Адрес</div>
+              <div class="text-one">г. Стерлитамак</div>
+              <div class="text-two">Стерлибашевский тракт</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Телефон</div>
+              <div class="text-one">+7 (347) 224‒94‒74</div>
+              <div class="text-two">8-900-000-00-00</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">83472249474@mail.ru</div>
+              <div class="text-two">admin@site.com</div>
+            </div>
+          </div>
+  
+          <div class="right-side">
+  
+            <div class="topic-text">Отправьте нам сообщение</div>
+  
+            <p>
+              Если у вас есть какие-то вопросы или предложения по сотрудничеству -
+              заполните форму ниже
+            </p>
+  
+            <form action="#">
+  
+              <div class="input-box">
+                <input required type="text" placeholder="Ваше имя (обязательное поле)" />
+              </div>
+              <div class="input-box">
+                <input required type="text" placeholder="Введите email (обязательное поле)" />
+              </div>
+              <div class="input-box">
+                <input required type="tel" placeholder="Введите телефон (обязательное поле)" />
+              </div>
+              <div class="input-box message-box">
+                <textarea placeholder="Сообщение"></textarea>
+              </div>
+              <div class="button">
+                <input type="submit" value="Отправить" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="fotter-col fotter-col-first">
+                        <div class="footer-logo">Спутник</div>
+                        <div class="footer-text">«Спутник вашего ремонта» — магазин по продаже стройматериалов. Экономьте время, покупайте в одном месте.
+                            Всегда большой ассортимент строительных и отделочных материалов по оптимальным ценам.</div>
+
+                        <div class="footer-social">
+                            <div class="footer-social-header">
+                                <b>15k</b> подписчиков
+                            </div>
+                            <div class="footer-social-content">
+                                Подписывайетсь на нас:
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                            </div>   
+                        </div>
+                        <form class="subscribe" action="/" method="POST">
+                            <input class="subscribe-input" type="email" name="name" placeholder="Ваша почта...">
+                            <button class="subscribe-btn" type="submit">Подписаться</button>
+                        </form>
+                    </div> <!-- /.footer-col -->
+
+                    <div class="footer-col fotter-col-second">
+                        <div class="footer-title">Блог</div>
+                        <div class="blogs-item">
+                            <img class="blogs-img" src="../assets/images/blog/1.jpg" alt="">
+                            <div class="blogs-content">
+                                <a class="blogs-title" href="#">Как выбрать и наклеить обои</a>
+                                <div class="blogs-date">9 янв. 2021</div>
+                            </div>
+                        </div>
+                        <div class="blogs-item">
+                            <img class="blogs-img" src="../assets/images/blog/2.jpg" alt="">
+                            <div class="blogs-content">
+                                <a class="blogs-title" href="#">Как выбрать люстру</a>
+                                <div class="blogs-date">9 янв. 2021</div>
+                            </div>
+                        </div>
+                        <div class="blogs-item">
+                            <img class="blogs-img" src="../assets/images/blog/3.jpg" alt="">
+                            <div class="blogs-content">
+                                <a class="blogs-title" href="#">Как подобрать и установить смеситель</a>
+                                <div class="blogs-date">9 янв. 2021</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-col fotter-col-third">
+                        <div class="footer-title">Instagram</div>
+
+                        <div class="instagram">
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/1.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/2.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/3.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/4.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/5.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/6.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/7.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/8.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="../assets/images/instagram/9.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div> <!-- /.footer-inner -->
+
+                <div class="copyright">
+                    © 2023 <span>ООО «СПУТНИК»</span>, сеть магазинов <span>СПУТНИК</span>. Все торговые марки являются собственностью соответсвующих владельцев.
+                </div>
+
+            </div>  <!-- /.container -->
+        </footer>
+    </body>
+</html>
