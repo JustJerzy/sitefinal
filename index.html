@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/nav.css">
+        <link rel="stylesheet" href="assets/css/intro.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/shoppingcart.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/images/ICON.png" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/9930dc3b58.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/slider.css"/>
+        <title>Спутник</title>
+    </head>
+    <body>
+        <a id="button"></a>
+        <!-- HEADER -->
+
+        <header class="header header.fixed" id="header">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="header-logo" data-scroll="#intro"><a href="index.html" class="header-logo">Спутник</a></div>
+                    <nav class="nav" id="nav">
+                        <div class="nav-link">
+                            <a href="pages/about.html" style="text-decoration: none; color: #fff;">Помощь</a>
+                            <div class="nav-link-hidden">Если возникли вопросы, вы можете позвонить по телефону: +7 (347) 224‒94‒74</div>
+                        </div>
+                        <a class="nav-link" href="#" data-scroll="#footer">О нас</a>
+                        <div class="nav-link">
+                            <i class="fas fa-shopping-cart"></i>
+                                <div class="nav-link-hidden">
+                                    <div class="titlecart">Корзина</div>
+                                    <div class="showcart">
+                                    <ul id="show-cart">
+                                        <li>???????</li>
+                                    </ul>
+                                    <div>Кол-во товаров в корзине: <span id="count-cart">X</span></div>
+                                    <div>Общая стоимость: <span id="total-cart"></span> руб.</div>
+                                    <div>
+                                        <button class="btncart" id="clear-cart">Очистить корзину</button>
+                                        <input placeholder="Купон" class="inputcart"  type="text" name="text1">
+                                        <input class="btncart"  type="button" value="Проверить купон" name="Submit" onclick="validate(document.getElementsByName('text1')[0].value)">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </nav>
+                    <button class="nav-toggle" id="nav-toggle" type="button">
+                        <span class="nav-toggle-item">Меню</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- INTRO -->
+
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="intro-inner">
+                    <h2 class="intro-suptitle">Интернет - магазин</h2>
+                    <h1 class="intro-title">Спутник</h1>
+
+                    <a class="btn" href="#" data-scroll="#navshop">Начать покупки</a>
+                </div>
+            </div> 
+        </div>  
+
+        <!-- SECTION NAV -->
+
+        <section class="section" id="navshop">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Навигация по разделам</h2>
+                    <div class="section-text">
+                        <nav class="nav" id="nav">
+                            <a class="btn-nav" data-scroll="#tools">Инструменты</a>
+                            <a class="btn-nav" data-scroll="#materials">Строительные материалы</a>
+                            <a class="btn-nav" data-scroll="#waterheaters">Водонагреватели</a>
+                            <a class="btn-nav" data-scroll="#paint">краски, лаки, антисептики</a>
+                        </nav>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section  section--gray">
+            <div class="container">
+                <div class="reviews">
+                    <div data-slider>
+                        <div>
+                            <div class="reviews__item">
+                                <a data-scroll="#paint">
+                                <img class="reviews__photo" src="assets/images/promo.jpg" alt="">
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div class="reviews__item">
+                                <a data-scroll="#waterheaters">
+                                    <img class="reviews__photo" src="assets/images/promo1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="reviews__item">
+                                <img class="reviews__photo" src="assets/images/promo2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <!-- SHOP -->
+
+        <section class="section" id="shop">
+            <div class="container">
+                <div class="section-header" id="tools">
+                    <h2 class="section-title">Инструменты</h2>
+                </div>
+
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/MetaboPowerMaxx.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/1.jpg">  
+                                </div>
+                                <div class="tools-text">Шуруповерт аккумуляторный Metabo PowerMaxx<p class="price">5 590 руб./шт</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/RedvergRD-ID700.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/2.jpg">
+                                </div>
+                                <div class="tools-text">Дрель сетевая ударная RedVerg RD-ID700 <p class="price">2 590 руб./шт</p></div>
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/BDKX1650.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/3.jpeg">
+                                </div>
+                                <div class="tools-text">Фен технический B&D KX1650<p class="price">1 990 руб./шт</p></div>
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/VihrDA18L.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/4.png">
+                                </div>
+                                <div class="tools-text">Шуруповерт электрический Вихрь СШ-550 <p class="price">2 090 руб./шт</p></div>
+                            </a>    
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/MakitaHP1640.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/5.jpg">
+                                </div>
+                                <div class="tools-text">Дрель сетевая Makita HP1640<p class="price">4 990 руб./шт</p></div>
+                            </a>    
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/Profit.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/6.jpg">
+                                </div>
+                                <div class="tools-text">Фен промышленный Profit<p class="price">2 490 руб./шт</p></div>
+                            </a>    
+                        </div>  
+                    </div>
+                </div>
+                <div class="section-header"id="materials">
+                    <h2 class="section-title">стройматериалы</h2>
+                </div>
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/IzoverDom.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/11.jpg">
+                                </div>
+                                <div class="tools-text">Утеплитель Изовер Дом Твин 1220x7000x50мм (0,85м3=17м2)уп<p class="price">1 095 руб./шт</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/IzoverPROFI.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/12.jpg">
+                                </div>
+                                <div class="tools-text">Утеплитель Изовер ПРОФИ 2шт 4100х610х100мм (0,5м3=5м2)уп<p class="price">815 руб./шт</p></div>
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/IzoverTepliy.html"> 
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/13.jpg">
+                                </div>
+                                <div class="tools-text">Утеплитель Изовер Теплый Дом-ТВИН-610х8200х50мм/Е/К (0,5м3=10м2) уп<p class="price">745 руб./шт</p></div>
+                            </a>
+                        </div>  
+                    </div>
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/stektpp.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/14.jpg">
+                                </div>
+                                <div class="tools-text">Стеклоизол Р ТПП 2,1мм (1x9м2) рул <p class="price">795 руб./рул.</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/stekxpp.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/15.jpg">
+                                </div>
+                                <div class="tools-text">Стеклоизол Р ХПП 2,1мм (1x9м2) рул <p class="price">635 руб./рул.</p></div>
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/stekxkp.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/16.jpg">
+                                </div>
+                                <div class="tools-text">Стеклоизол Р ХКП 3,5мм (1x9м2) гранулят серый рул<p class="price">775 руб./рул.</p></div>
+                            </a>
+                        </div>  
+                    </div>
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/knaufvlag.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/17.png">
+                                </div>
+                                <div class="tools-text">Гипсокартон влагостойкий KNAUF 1200х2500х12,5мм <p class="price">395 руб./лист</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/knaufgips.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/18.png">
+                                </div>
+                                <div class="tools-text">Гипсокартон KNAUF 1200х2500х12,5мм <p class="price">290 руб./лист</p></div
+                            ></a>
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/gips.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/19.png">
+                                </div>
+                                <div class="tools-text">Гипсокартон 1200х2500х9,5мм <p class="price">215 руб./лист</p></div>
+                            </a>
+                        </div>  
+                    </div>
+                <div class="section-header"id="waterheaters">
+                    <h2 class="section-title">Водонагреватели</h2>
+                </div>
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/absvlsevo.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/absvlsevo.jpg">
+                                </div>
+                                <div class="tools-text">Водонагреватель ABS VLS EVO INOX PW 50 D<p class="price">17 995 руб./шт</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/EdissonER.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/EdissonER.jpg">
+                                </div>
+                                <div class="tools-text">Водонагреватель Edisson ER 50V<p class="price">4 499 руб./шт</p></div>
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/HaierES50.html"> 
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/HaierES50V.jpg">
+                                </div>
+                                <div class="tools-text">Водонагреватель накопительный Haier ES50V-A2 50л<p class="price"><s>6 995 руб./шт.</s><br>6 295 руб./шт</p></div>
+                            </a>
+                        </div>  
+                    </div>
+                <div class="tools">
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/absvlsevopw.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/absvlsevo.jpg">
+                                </div>
+                                <div class="tools-text">Водонагреватель ABS VLS EVO PW 50 D <p class="price">14 495 руб./шт.</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/termex.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/Termex.jpg">
+                                </div>
+                                <div class="tools-text">Водонагреватель Термекс MK 50 V <p class="price">13 195 руб./шт.</p></div>
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="tools-item">
+                        <div class="tools-inner">
+                            <a href="pages/atlantic.html">
+                                <div class="tools-img">
+                                    <img src="assets/images/tools/atlantic.jpg">
+                                </div>
+                                <div class="tools-text">Водонагреватель накопительный ATLANTIC Vertigo Basic 50л<p class="price">13 295 руб./шт.</p></div>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="section-header"id="paint">
+                        <h2 class="section-title">краски, лаки, антисептики</h2>
+                    </div>
+                    <div class="tools">
+                        <div class="tools-item">
+                            <div class="tools-inner">
+                                <a href="pages/husky.html">
+                                    <div class="tools-img">
+                                        <img src="assets/images/tools/husky.jpeg">
+                                    </div>
+                                    <div class="tools-text">Антисептик HUSKY SIBERIAN ЭКО-ЛАЗУРЬ полуматовый бесцветный (9л)<p class="price"><s>2 995  руб./шт.</s><br>2 199 руб./шт.</p></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-inner">
+                                <a href="pages/aquatex.html">
+                                    <div class="tools-img">
+                                        <img src="assets/images/tools/aquatex.jpg">
+                                    </div>
+                                    <div class="tools-text">Антисептик кроющий Акватекс Сканди Айсберг белый База А (9л)<p class="price"><s>5 395 руб./шт.</s><br>3 999 руб./шт.</p></div>
+                                </a>
+                            </div>
+                        </div>  
+                        <div class="tools-item">
+                            <div class="tools-inner">
+                                <a href="pages/krass.html"> 
+                                    <div class="tools-img">
+                                        <img src="assets/images/tools/Krass.jpg">
+                                    </div>
+                                    <div class="tools-text">Герметик силиконовый санитарный Krass белый (300мл)<p class="price"><s>285 руб./шт.</s><br> 229 руб./шт.</p></div>
+                                </a>
+                            </div>  
+                        </div>
+                </div>
+            </div> <!-- container -->
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <div class="statistics">
+            <div class="container">
+                <div class="stat">
+                    <div class="stat-item">
+                        <div class="stat-count">425</div>
+                        <div class="stat-text">Проектов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-count">1156</div>
+                        <div class="stat-text">Довольных клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-count">40</div>
+                        <div class="stat-text">Акций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-count">92</div>
+                        <div class="stat-text">Товара по акции</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-count">12</div>
+                        <div class="stat-text">Сотрудников</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- MAP -->
+
+        <section class="section section--map" id="map">
+            <div class="container">
+                <div class="map">
+                    <h2 class="map-title">
+                        <div><i class="fas fa-map-marker-alt"></i></div>
+                        <a href="https://go.2gis.com/sh073" target="_blank">Открыть карту</a>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="fotter-col fotter-col-first">
+                        <div class="footer-logo">Спутник</div>
+                        <div class="footer-text">«Спутник вашего ремонта» — магазин по продаже стройматериалов. Экономьте время, покупайте в одном месте.
+                            Всегда большой ассортимент строительных и отделочных материалов по оптимальным ценам.
+                            <br>
+                            <br><b>Связь с нами: +7 (347) 224‒94‒74, 83472249474@mail.ru</b></div>
+
+                        <div class="footer-social">
+                            <div class="footer-social-header">
+                                <b>15k</b> подписчиков
+                            </div>
+                            <div class="footer-social-content">
+                                Подписывайетсь на нас:
+                                <a href="http://facebook.com" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="http://instagram.com" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="http://vk.com" target="_blank">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                            </div>   
+                        </div>
+                        <form class="subscribe" action="#" id="signup-form" method="POST" enctype="multipart/form-data">
+                            <input class="subscribe-input" type="email" name="name" placeholder="Ваша почта...">
+                            <input class="subscribe-btn" type="submit" value="Подписаться">
+                        </form>
+                    </div> <!-- /.footer-col -->
+                    <div class="footer-col fotter-col-second">
+                        <div class="footer-title">Блог</div>
+                        <div class="blogs-item">
+                            <img class="blogs-img" src="assets/images/blog/1.jpg" alt="">
+                            <div class="blogs-content">
+                                <a class="blogs-title" href="#">Как выбрать и наклеить обои</a>
+                                <div class="blogs-date">9 янв. 2021</div>
+                            </div>
+                        </div>
+                        <div class="blogs-item">
+                            <img class="blogs-img" src="assets/images/blog/2.jpg" alt="">
+                            <div class="blogs-content">
+                                <a class="blogs-title" href="#">Как выбрать люстру</a>
+                                <div class="blogs-date">9 янв. 2021</div>
+                            </div>
+                        </div>
+                        <div class="blogs-item">
+                            <img class="blogs-img" src="assets/images/blog/3.jpg" alt="">
+                            <div class="blogs-content">
+                                <a class="blogs-title" href="#">Как подобрать и установить смеситель</a>
+                                <div class="blogs-date">9 янв. 2021</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-col fotter-col-third">
+                        <div class="footer-title">Instagram</div>
+
+                        <div class="instagram">
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/1.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/2.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/3.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/4.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/5.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/6.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/7.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/8.jpg" alt="">
+                            </a>
+                            <a class="intsagram-item" href="#" target="_blank">
+                                <img src="assets/images/instagram/9.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div> <!-- /.footer-inner -->
+
+                <div class="copyright">
+                    © 2023 <span>ООО «СПУТНИК»</span>, сеть магазинов <span>СПУТНИК</span>. Все торговые марки являются собственностью соответсвующих владельцев.<br>
+                <div class="payment">
+                    <br><div class="titlepay">Принимаем к оплате</div>
+                    <img src="assets/images/payment/visa.png" width="40px" height="18px">
+                    <img src="assets/images/payment/mc.png" width="40px" height="18px">
+                    <img src="assets/images/payment/mir.png" width="40px" height="18px">
+                    <img src="assets/images/payment/googlepay.png" width="40px" height="18px">
+                    <img src="assets/images/payment/applepay.png" width="40px" height="18px">
+                </div>
+                </div>
+
+            </div>  <!-- /.container -->
+        </footer>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="pages/js/shoppingCart.js"></script>
+        <script>
+
+            $(".add-to-cart").click(function(event){
+                event.preventDefault();
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+
+                shoppingCart.addItemToCart(name, price, 1);
+                displayCart();
+            });
+
+            $("#clear-cart").click(function(event){
+                shoppingCart.clearCart();
+                displayCart();
+            });
+
+            function displayCart() {
+                var cartArray = shoppingCart.listCart();
+                console.log(cartArray);
+                var output = "";
+
+                for (var i in cartArray) {
+                    output += "<li>"
+                        +cartArray[i].name
+                        +" <input class='item-count' type='number' data-name='"
+                        +cartArray[i].name
+                        +"' value='"+cartArray[i].count+"' >"
+                        +" x "+cartArray[i].price
+                        +" = "+cartArray[i].total
+                        +" <button class='plus-item' data-name='"
+                        +cartArray[i].name+"'>+</button>"
+                        +" <button class='subtract-item' data-name='"
+                        +cartArray[i].name+"'>-</button>"
+                        +" <button class='delete-item' data-name='"
+                        +cartArray[i].name+"'>X</button>"
+                        +"</li>";
+                }
+
+                $("#show-cart").html(output);
+                $("#count-cart").html( shoppingCart.countCart() );
+                $("#total-cart").html( shoppingCart.totalCart() );
+            }
+
+            $("#show-cart").on("click", ".delete-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemFromCartAll(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".subtract-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemFromCart(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".plus-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.addItemToCart(name, 0, 1);
+                displayCart();
+            });
+
+            $("#show-cart").on("change", ".item-count", function(event){
+                var name = $(this).attr("data-name");
+                var count = Number($(this).val());
+                shoppingCart.setCountForItem(name, count);
+                displayCart();
+            });
+
+
+            displayCart();
+
+        </script>
+
+<script>
+    function validate(coupon) {
+      codes = new Object();
+      codes.GOLD20 = 20;
+      codes.GOLD = 30;
+      codes.GOLD40 = 40;
+      codes.GOLD50 = 50;
+      console.log(coupon)
+      if (codes[coupon]) {
+        window.alert("Купон применен! Продолжайте покупки со скидкой!");
+      } else {
+        window.alert("Неверный купон. Пожалуйста проверьте правильность ввода и попробуйте еще раз.");
+      }
+    }
+  </script>
+
+    </body>
+</html>
